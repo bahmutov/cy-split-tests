@@ -1,4 +1,6 @@
 const { defineConfig } = require('cypress')
+// https://github.com/bahmutov/cypress-split
+const cypressSplit = require('cypress-split')
 
 module.exports = defineConfig({
   fixturesFolder: false,
@@ -9,6 +11,8 @@ module.exports = defineConfig({
       grepOmitFiltered: true,
     },
     setupNodeEvents(on, config) {
+      cypressSplit(on, config)
+
       require('@bahmutov/cy-grep/src/plugin')(config)
       // make sure to return the config object
       // as it might have been modified by the plugin
