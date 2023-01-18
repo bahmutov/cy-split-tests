@@ -14,6 +14,8 @@ $ npm install
 
 You can start the application and open Cypress by running `npm run dev` command.
 
+If you get the tag `reusable`, you will start right before using [cypress-workflows](https://github.com/bahmutov/cypress-workflows).
+
 ## Small print
 
 Author: Gleb Bahmutov &lt;gleb.bahmutov@gmail.com&gt; &copy; 2023
