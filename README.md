@@ -2,7 +2,10 @@
 
 > Several tests to be run in parallel example
 
-Example repo for 🎓 [Cypress Plugins course](https://cypress.tips/courses/cypress-plugins).
+Example repo for courses 🎓
+
+- [Cypress Plugins course](https://cypress.tips/courses/cypress-plugins)
+- [Cypress-split Plugin](https://cypress.tips/courses/cypress-split)
 
 To get started, clone the repo and check out the tag `start`. For example, by using [degit](https://github.com/Rich-Harris/degit#readme) to get your own copy of the code separate from the this repository.
 
