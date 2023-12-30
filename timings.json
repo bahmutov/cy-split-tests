@@ -1,0 +1,36 @@
+{
+  "durations": [
+    {
+      "spec": "cypress/e2e/add-item-spec.js",
+      "duration": 5738
+    },
+    {
+      "spec": "cypress/e2e/completed-spec.js",
+      "duration": 7954
+    },
+    {
+      "spec": "cypress/e2e/counter-spec.js",
+      "duration": 1379
+    },
+    {
+      "spec": "cypress/e2e/editing-spec.js",
+      "duration": 7566
+    },
+    {
+      "spec": "cypress/e2e/item-spec.js",
+      "duration": 3627
+    },
+    {
+      "spec": "cypress/e2e/misc-spec.js",
+      "duration": 560
+    },
+    {
+      "spec": "cypress/e2e/persistence-spec.js",
+      "duration": 1277
+    },
+    {
+      "spec": "cypress/e2e/routing-spec.js",
+      "duration": 7152
+    }
+  ]
+}
