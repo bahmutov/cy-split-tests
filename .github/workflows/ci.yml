@@ -17,11 +17,9 @@ jobs:
         with:
           start: npm start
           publish-summary: false
-          # only run specs in the cypress E2E sanity folder
-          spec: 'cypress/e2e/sanity/*-spec.js'
+          # TODO: only run specs in the cypress E2E sanity folder
         env:
           # pass the machine index and the total number
           SPLIT: ${{ strategy.job-total }}
           SPLIT_INDEX: ${{ strategy.job-index }}
-          # IMPORTANT: pass the spec file pattern to cypress-split plugin
-          SPEC: 'cypress/e2e/sanity/*-spec.js'
+          # TODO IMPORTANT: pass the spec file pattern to cypress-split plugin
