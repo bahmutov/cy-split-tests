@@ -7,7 +7,7 @@
 
 import { TODO_ITEM_ONE, TODO_ITEM_THREE } from '../utils'
 
-describe('TodoMVC - React', { tags: '@complete' }, function () {
+describe('TodoMVC - React', function () {
   beforeEach(function () {
     // By default Cypress will automatically
     // clear the Local Storage prior to each

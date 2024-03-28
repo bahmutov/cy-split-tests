@@ -7,7 +7,7 @@
 
 import { TODO_ITEM_ONE, TODO_ITEM_TWO, TODO_ITEM_THREE } from '../utils'
 
-describe('TodoMVC - React', { tags: '@add' }, function () {
+describe('TodoMVC - React', function () {
   beforeEach(function () {
     // By default Cypress will automatically
     // clear the Local Storage prior to each
@@ -36,7 +36,7 @@ describe('TodoMVC - React', { tags: '@add' }, function () {
   })
 
   // a very simple example helpful during presentations
-  it('adds 4 todos', { tags: '@smoke' }, function () {
+  it('adds 4 todos', function () {
     cy.get('.new-todo')
       .type('learn testing{enter}')
       .type('be cool{enter}')

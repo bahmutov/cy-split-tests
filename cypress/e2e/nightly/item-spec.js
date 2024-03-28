@@ -73,7 +73,7 @@ describe('TodoMVC - React', function () {
       cy.get('@secondTodo').should('not.have.class', 'completed')
     })
 
-    it('should allow me to edit an item', { tags: '@smoke' }, function () {
+    it('should allow me to edit an item', function () {
       cy.createDefaultTodos().as('todos')
 
       cy.get('@todos')

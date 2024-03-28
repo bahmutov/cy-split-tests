@@ -7,7 +7,7 @@
 
 import { TODO_ITEM_ONE, TODO_ITEM_THREE } from '../utils'
 
-describe('TodoMVC - React', { tags: '@routing' }, function () {
+describe('TodoMVC - React', function () {
   beforeEach(function () {
     // By default Cypress will automatically
     // clear the Local Storage prior to each
@@ -57,7 +57,7 @@ describe('TodoMVC - React', { tags: '@routing' }, function () {
       cy.getTodos().eq(1).should('contain', TODO_ITEM_THREE)
     })
 
-    it('should respect the back button', { tags: ['@smoke'] }, function () {
+    it('should respect the back button', function () {
       cy.getTodos().eq(1).find('.toggle').check()
 
       cy.get('.filters').contains('Active').click()

@@ -7,7 +7,7 @@
 
 import { TODO_ITEM_ONE, TODO_ITEM_TWO, TODO_ITEM_THREE } from '../utils'
 
-describe('TodoMVC - React', { tags: '@edit' }, function () {
+describe('TodoMVC - React', function () {
   beforeEach(function () {
     // By default Cypress will automatically
     // clear the Local Storage prior to each
@@ -51,7 +51,7 @@ describe('TodoMVC - React', { tags: '@edit' }, function () {
       cy.get('@secondTodo').find('label').should('not.be.visible')
     })
 
-    it('should save edits on blur', { tags: '@smoke' }, function () {
+    it('should save edits on blur', function () {
       cy.get('@todos').eq(1).as('secondTodo').find('label').dblclick()
 
       cy.get('@secondTodo')

@@ -7,7 +7,7 @@
 
 import { TODO_ITEM_ONE, TODO_ITEM_TWO } from '../utils'
 
-describe('TodoMVC - React', { tags: '@persistence' }, function () {
+describe('TodoMVC - React', function () {
   beforeEach(function () {
     // By default Cypress will automatically
     // clear the Local Storage prior to each
@@ -36,7 +36,7 @@ describe('TodoMVC - React', { tags: '@persistence' }, function () {
   })
 
   context('Persistence', function () {
-    it('should persist its data', { tags: '@smoke' }, function () {
+    it('should persist its data', function () {
       // mimicking TodoMVC tests
       // by writing out this function
       function testState() {
