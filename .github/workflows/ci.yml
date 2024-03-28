@@ -12,14 +12,16 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Run split Cypress sanity specs 🧪
+        # https://github.com/cypress-io/github-action
         uses: cypress-io/github-action@v6
         with:
           start: npm start
+          publish-summary: false
           # only run specs in the cypress E2E sanity folder
           spec: 'cypress/e2e/sanity/*-spec.js'
         env:
           # pass the machine index and the total number
           SPLIT: ${{ strategy.job-total }}
           SPLIT_INDEX: ${{ strategy.job-index }}
-          # IMPORTANT: pass the spec file pattern
+          # IMPORTANT: pass the spec file pattern to cypress-split plugin
           SPEC: 'cypress/e2e/sanity/*-spec.js'
