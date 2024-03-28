@@ -1,11 +1,11 @@
 // type definitions for Cypress and
 // custom commands like "createDefaultTodos"
-/// <reference types="../support" />
+/// <reference types="../../support" />
 
 // check this file using TypeScript if available
 // @ts-check
 
-import { TODO_ITEM_ONE, TODO_ITEM_THREE } from './utils'
+import { TODO_ITEM_ONE, TODO_ITEM_THREE } from '../utils'
 
 describe('TodoMVC - React', { tags: '@complete' }, function () {
   beforeEach(function () {
