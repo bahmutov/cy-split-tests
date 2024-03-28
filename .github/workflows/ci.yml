@@ -1,21 +1,25 @@
 name: ci
 on: push
 jobs:
-  tests:
+  sanity:
     runs-on: ubuntu-20.04
-    # run 3 copies of the current job in parallel
+    # run 2 copies of the current job in parallel
     strategy:
       fail-fast: false
       matrix:
-        containers: [1, 2, 3]
+        containers: [1, 2]
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - name: Run split Cypress tests 🧪
-        uses: cypress-io/github-action@v5
-        # pass the machine index and the total number
+      - name: Run split Cypress sanity specs 🧪
+        uses: cypress-io/github-action@v6
         with:
           start: npm start
+          # only run specs in the cypress E2E sanity folder
+          spec: 'cypress/e2e/sanity/*-spec.js'
         env:
+          # pass the machine index and the total number
           SPLIT: ${{ strategy.job-total }}
           SPLIT_INDEX: ${{ strategy.job-index }}
+          # IMPORTANT: pass the spec file pattern
+          SPEC: 'cypress/e2e/sanity/*-spec.js'
