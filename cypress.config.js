@@ -7,12 +7,7 @@ const path = require('path')
 // and always run it first
 function changeSpecOrder(specs) {
   // we must deal with absolute file paths
-  const resetSpec = path.resolve('cypress/e2e/reset-spec.js')
-  if (specs.includes(resetSpec)) {
-    specs = specs.filter((s) => s !== resetSpec)
-  }
   // put the reset spec first
-  specs.unshift(resetSpec)
   console.log('split spec order')
   specs.forEach((spec) => {
     console.log(spec)
