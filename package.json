@@ -10,7 +10,8 @@
     "start": "http-server -p 8888 -c-1",
     "start:ci": "http-server -p 8888 -c-1 --silent",
     "dev:run": "start-test start:ci 8888 cypress:run",
-    "print-tests": "find-cypress-specs --names"
+    "print-tests": "find-cypress-specs --names",
+    "print-tags": "find-cypress-specs --tags"
   },
   "dependencies": {
     "director": "1.2.8",

@@ -1,6 +1,30 @@
 /// <reference types="@bahmutov/cy-grep" />
 
+/**
+ * The only allowed test tags in this project
+ */
+type AllowedTag =
+  | '@smoke'
+  | '@misc'
+  | '@new-todo'
+  | '@add'
+  | '@complete'
+  | '@counter'
+  | '@edit'
+  | '@persistence'
+  | '@routing'
+
 declare namespace Cypress {
+  interface SuiteConfigOverrides {
+    tags?: AllowedTag | AllowedTag[]
+    requiredTags?: AllowedTag | AllowedTag[]
+  }
+
+  interface TestConfigOverrides {
+    tags?: AllowedTag | AllowedTag[]
+    requiredTags?: AllowedTag | AllowedTag[]
+  }
+
   interface Chainable<Subject> {
     /**
      * Create several Todo items via UI
