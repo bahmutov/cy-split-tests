@@ -12,10 +12,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // configure the grep and the split plugins
       // to work together
-      // first: filter the specs using grep and test tags if any
-      cypressGrep(config)
-      // second: split the filtered specs into groups
-      cypressSplit(on, config)
+
       // IMPORTANT: return the modified config object
       return config
     },
